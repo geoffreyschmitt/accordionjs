@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion basic</title>
+    <!--<link rel="stylesheet" href="../build/css/accordion.css">-->
+    <meta name="viewport" content="width=device-width">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/css/reset.min.css">
+    <link rel="stylesheet" href="../assets/css/playground.css">
+    <link rel="stylesheet" href="../../dist/css/accordions.min.css">
+</head>
+<body>
+    <div class="return">
+        <a href="../index.html">Retour aux exemples</a>
+    </div>
+    <div class="WithCustomEvent">
+        <h2>With custom Event</h2>
+        <div class="js-accordion__container">
+            <div class="accordion__title" tabindex="0">
+                  <span class="accordion__title__text">Ceci est le title</span>
+                  <i class="accordion__title__icon">+</i>
+            </div>
+            <div class="accordion__content">
+                <div class="accordion__content__inner">
+
+                    <p>Quisque nec tellus vel risus tempor imperdiet in eu sapien. Donec sed sodales tellus, et placerat purus. In vulputate urna nec massa fermentum volutpat. Mauris id leo nibh. Nulla non ante ac nibh feugiat mollis sed vel turpis. Morbi interdum posuere gravida. Integer volutpat elementum nisl, vel condimentum justo volutpat eget. Aenean felis velit, ornare vel sem eu, scelerisque tempus elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="js-accordion__container">
+            <div class="accordion__title" tabindex="0">
+                  <span class="accordion__title__text">Ceci est le title</span>
+                  <i class="accordion__title__icon">+</i>
+            </div>
+            <div class="accordion__content">
+                <div class="accordion__content__inner">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id dui non orci viverra eleifend tincidunt a elit. Vivamus at facilisis velit. Nulla et lacinia magna. Integer vel tortor sed nibh consectetur blandit. Sed cursus efficitur mollis. Donec non iaculis tortor. Praesent sed ipsum rhoncus, dignissim justo a, ullamcorper urna. Duis ut commodo lacus, quis pulvinar nibh. Phasellus felis dui, fringilla id tincidunt tempor, dictum et metus. Sed consectetur, dui id scelerisque dapibus, velit quam consectetur eros, at convallis nisi odio vel leo. Nunc aliquet, urna et blandit interdum, dolor arcu placerat arcu, a tristique urna magna ut ante. Maecenas nec erat in augue mattis scelerisque sit amet sit amet tellus. Etiam non vehicula purus. Sed nibh dui, eleifend sit amet mauris hendrerit, vestibulum fringilla elit.</p>
+
+                    <p>Curabitur commodo metus in turpis tempus molestie. Fusce eros enim, fringilla sed tellus sed, dignissim tincidunt tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis luctus est, sed ullamcorper justo pulvinar quis. Donec eget nisl sed elit facilisis suscipit sed vitae justo. Nulla facilisi. Sed ultricies magna et arcu tincidunt, sed interdum dui efficitur. Nunc porttitor finibus varius. Sed suscipit hendrerit velit, at congue libero fermentum eget. Aliquam congue malesuada elit vitae vestibulum. Sed viverra viverra mi, sed pulvinar enim venenatis vel. Integer in imperdiet nunc. Duis laoreet laoreet lacinia.</p>
+
+                    <p>Quisque nec tellus vel risus tempor imperdiet in eu sapien. Donec sed sodales tellus, et placerat purus. In vulputate urna nec massa fermentum volutpat. Mauris id leo nibh. Nulla non ante ac nibh feugiat mollis sed vel turpis. Morbi interdum posuere gravida. Integer volutpat elementum nisl, vel condimentum justo volutpat eget. Aenean felis velit, ornare vel sem eu, scelerisque tempus elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="js-accordion__container">
+            <div class="accordion__title" tabindex="0">
+                  <span class="accordion__title__text">Ceci est le title</span>
+                  <i class="accordion__title__icon">+</i>
+            </div>
+            <div class="accordion__content">
+                <div class="accordion__content__inner">
+                    <p>Quisque nec tellus vel risus tempor imperdiet in eu sapien. Donec sed sodales tellus, et placerat purus. In vulputate urna nec massa fermentum volutpat. Mauris id leo nibh. Nulla non ante ac nibh feugiat mollis sed vel turpis. Morbi interdum posuere gravida. Integer volutpat elementum nisl, vel condimentum justo volutpat eget. Aenean felis velit, ornare vel sem eu, scelerisque tempus elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../dist/js/Accordions.min.js"></script>
+    <script>
+        var accordion = new accordions({
+            on : {
+                beforeInit: function () {
+                    console.log('BEFORE accordion INIT');
+                },
+                init: function () {
+                    console.log('accordion INIT');
+                },
+                titleHover: function () {
+                    console.log('title is hover');
+                },
+                titleEndHover: function () {
+                    console.log('title is no more hover');
+                },
+                beforeAccordionChange: function () {
+                    console.log('before Accordion Change (open or close)');
+                },
+                accordionWillChange: function () {
+                    console.log('accordion Will Change (open or close)');
+                },
+                accordionWillOpen: function () {
+                    console.log('accordion Will Open');
+                },
+                accordionIsOpen: function () {
+                    console.log('accordion IS Open');
+                },
+                accordionWillClose: function () {
+                    console.log('accordion Will Close');
+                },
+                accordionIsClose: function () {
+                    console.log('accordion IS Close');
+                },
+                accordionChanged: function () {
+                    console.log('accordion Changed');
+                },
+
+            }
+        });
+    </script>
+</body>
+</html>

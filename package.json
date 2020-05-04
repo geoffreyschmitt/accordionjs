@@ -1,0 +1,39 @@
+{
+  "name": "accordionjs-src",
+  "version": "1.0.0",
+  "description": "Accordion generator - Generateur d'accordéons",
+  "author": "Geoffrey SCHMITT",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src/js/Utils.js src/js/Accordions.js src/js/Accordions.js src/js/ClassManagement.js src/js/default.js",
+    "build": "npm run lint && gulp build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "latest",
+    "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-cssbeautify": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-csso": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^1.2.0",
+    "rollup": "^2.7.6",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}

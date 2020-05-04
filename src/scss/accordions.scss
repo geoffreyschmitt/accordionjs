@@ -1,0 +1,58 @@
+.js-accordion__container {
+    border     : 1px solid #eee;
+    box-shadow : 2px 2px 11px 0 rgba(0, 0, 0, 0.1);
+    & + .js-accordion__container {
+        margin-top : 15px;
+    }
+
+    .accordion__title {
+        background      : white;
+        color           : black;
+        padding         : 15px;
+        font-weight     : 700;
+        display         : flex;
+        justify-content : space-between;
+        align-items     : center;
+        cursor          : pointer;
+        border-bottom   : 1px solid rgba(0, 0, 0, 0.1);
+        transition      : all .3s ease-out;
+        &:hover {
+            color : rgb(52, 152, 219);
+        }
+        &.--is-active {
+            background : #ecf0f1;
+            color      : rgb(41, 128, 185);
+        }
+    }
+
+    .accordion__content {
+        font-weight    : 400;
+        position       : relative;
+        pointer-events : none;
+        height         : 0;
+        overflow       : hidden;
+        transition     : all 0.3s ease-out;
+
+        .accordion__content__inner {
+            padding        : 15px;
+            pointer-events : all;
+        }
+        .accordion__content-preview__overlay {
+            position   : absolute;
+            top        : 0;
+            bottom     : 0;
+            left       : 0;
+            right      : 0;
+            background : linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1));
+            transition : all 0.5s ease-out;
+        }
+
+        &.--is-active {
+            .accordion__content-preview__overlay {
+                background : rgba(255, 255, 255, 0);
+            }
+        }
+
+    }
+
+}
