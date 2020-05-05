@@ -3,7 +3,7 @@ Accordion JS
 
 Accordions js - is the free and modern accordion generator for mobile websites.
 
-Accordion js is not compatible with all platforms, it is a modern  accordion generato which is focused only on modern browser to bring simplicity.
+Accordion js is not compatible with all platforms, it is a modern  accordion generator which is focused only on modern browser to bring simplicity.
 
 # Dist / Build
 
