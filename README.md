@@ -34,6 +34,34 @@ $ npm run build
 Production version will available in `dist/` folder.
 
 
+# Basic html structure
+
+    <div class="js-accordion__container">
+        <div class="accordion__title" tabindex="0">
+                <!-- Title here -->
+        </div>
+        <div class="accordion__content">
+            <div class="accordion__content__inner">
+                <!-- Content here -->
+            </div>
+        </div>
+    </div>
+        
+# getting started
+
+You can init accordions by using in your js file
+    
+    new accordions();
+    
+if you want to use a different HTML structure than the basic one, you will have to edit the parameters "elSelector" in order to make it fit to your HTML. You will find all the Editable parameters in the next section.
+
+In order to change parameters, you will have to change the previous exemple like that :
+    
+    new accordions({
+        //params
+    });
+    
+
 # Editable parameters
 
     // Parameters that you can change
