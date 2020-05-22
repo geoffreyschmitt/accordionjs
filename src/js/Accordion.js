@@ -244,7 +244,9 @@ class Accordion extends ClassManagement {
     };
 
     onTitleClick = (e) => {
-        e.preventDefault();
+        if (e.type === 'keydown' && (e.key !== 'Tab' && e.key !== 'ShiftLeft' && e.key !== 'ShiftRight')) {
+            e.preventDefault();
+        }
         const self = this;
         if (e.type === 'keydown' && (e.key !== 'Enter' && e.code !== 'Space')) {
             return;
